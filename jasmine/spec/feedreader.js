@@ -53,7 +53,7 @@ $(function() {
     });
 
 
-    /* TODO: Write a new test suite named "The menu" */
+    /* A new test suite named "The menu" */
     
     describe('The menu', function() {
         const menu = document.querySelector('body');
@@ -72,26 +72,55 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
-
+         it('menu display when clicked', function() {
+            menu.classList.toggle('menu-hidden');
+            expect(menu.classList.contains('menu-hidden')).toBe(false);
+         });
 
 
     });
 
 
         
-    /* TODO: Write a new test suite named "Initial Entries" */
+    /* A new test suite named "Initial Entries" */
+    describe('Initial Entries', function() {
 
-        /* TODO: Write a tes t that ensures when the loadFeed
+        /* The test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+        beforeEach(function(done) {
+            loadFeed(0,done);
+        });
 
-    /* TODO: Write a new test suite named "New Feed Selection" */
+    });
 
-        /* TODO: Write a test that ensures when a new feed is loaded
+
+    /* A new test suite named "New Feed Selection" */
+    describe('New Feed Selection', function() {
+        let initialFeed;
+        let newFeed;
+         /* The test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+        beforeEach(function(done) {
+            loadFeed(0, function() {
+                initialFeed = document.querySelector('.feed').textContent;
+                done();
+            });
+        });
+
+        it('loads new feed', function() {
+            loadFeed(2, function() {
+                newFeed = document.querySelector('.feed').textContent;
+                expect(newFeed).not.toEqual(initialFeed);
+                done();
+            })
+        });
+
+    });
+
 }());
