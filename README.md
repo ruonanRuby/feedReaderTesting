@@ -8,7 +8,7 @@ View the complete project [here](https://ruonanruby.github.io/feedReaderTesting/
 
 **OR**
 ### Run the app on the local machine 
-- Download/clone the repository and open in your code editor
-- Find the index.html file and open it in a modern browser
-= The Jasmine tests are displayed at the bottom of the index.html page.
-= Open the feedreader.js file to code more tests.
+- Download/clone the repository and open in your code editor.
+- Find the index.html file and open it in a modern browser.
+- The Jasmine tests are displayed at the bottom of the index.html page.
+- Open the feedreader.js file to code more tests.
