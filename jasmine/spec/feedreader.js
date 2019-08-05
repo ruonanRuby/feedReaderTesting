@@ -73,8 +73,8 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
          it('menu display when clicked', function() {
-            menu.classList.toggle('menu-hidden');
-            expect(menu.classList.contains('menu-hidden')).toBe(false);
+            expect(menu.classList.toggle('menu-hidden')).toBe(false);
+            expect(menu.classList.toggle('menu-hidden')).toBe(true);
          });
 
 
