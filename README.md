@@ -4,9 +4,6 @@ In this project, a web-based application that reads RSS feeds is given, also the
 
 
 ## How to Open App
-View the complete project [here](https://ruonanruby.github.io/feedReaderTesting/)
-
-**OR**
 ### Run the app on the local machine 
 - Download/clone the repository and open in your code editor.
 - Find the index.html file and open it in a modern browser.
